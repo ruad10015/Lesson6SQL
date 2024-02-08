@@ -1,0 +1,78 @@
+﻿<Window x:Class="Lesson6SQL.Domain.Views.DataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lesson6SQL.Domain.Views"
+        mc:Ignorable="d"
+        Title="DataWindow" Height="450" Width="800" WindowState="Maximized" DataContext="{Binding RelativeSource={RelativeSource Self}}" >
+    
+    <Grid>
+        <StackPanel>
+            <WrapPanel>
+                <Label Background="Gray" Width="153" Height="30" Content="ProductID" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="153" Height="30" Content="ProductName" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="153" Height="30" Content="SupplierID" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="153" Height="30" Content="CategoryID" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="153" Height="30" Content="QuantityPerUnit" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="153" Height="30" Content="UnitPrice" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="153" Height="30" Content="UnitsInStock" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="153" Height="30" Content="UnitsOnOrder" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="153" Height="30" Content="ReorderLevel" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="153" Height="30" Content="Discontinued" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <TextBox x:Name="TextBoxProductId" Width="153" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox x:Name="ProductNameTextBox" Width="153" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox x:Name="SupplierIdTextBox" Width="153" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox x:Name="CategoryIdTextBox" Width="153" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox x:Name="QuantityPerUnitTextBox" Width="153" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox x:Name="UnitPriceTextBox" Width="153" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox x:Name="UnitsInStockTextBox" Width="153" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox x:Name="UnitsOnOrderTextBox" Width="153" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox x:Name="ReorderLevelTextBox" Width="153" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox x:Name="DiscontinuedTextBox" Width="153" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+            </WrapPanel>
+            <DataGrid Margin="10" Height="200" ItemsSource="{Binding AllProduct}" SelectedItem="{Binding SelectedProduct, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            </DataGrid>
+
+            <Button Command="{Binding AddCommandProduct}" Content="Add Product" Height="35" FontSize="20" FontWeight="Bold" Background="Black" Foreground="White"></Button>
+            <Button Command="{Binding UpdateCommandProduct}" Content="Update Product" Height="35" FontSize="20" FontWeight="Bold" Background="Black" Foreground="White"></Button>
+
+            <WrapPanel Margin="0,20,0,0">
+                <Label Background="Gray" Width="109" Height="30" Content="OrderID" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="109" Height="30" Content="CustomerID" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="109" Height="30" Content="EmployeeID" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="109" Height="30" Content="OrderDate" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="109" Height="30" Content="RequiredDate" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="109" Height="30" Content="ShippedDate" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="109" Height="30" Content="ShipVia" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="109" Height="30" Content="Freight" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="109" Height="30" Content="ShipName" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="109" Height="30" Content="ShipAddress" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="109" Height="30" Content="ShipCity" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="109" Height="30" Content="ShipRegion" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="109" Height="30" Content="ShipPostalCode" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <Label Background="Gray" Width="109" Height="30" Content="ShipCountry" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center"></Label>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+                <TextBox Width="109" Height="30" FontWeight="Bold" FontSize="20"></TextBox>
+            </WrapPanel>
+            <DataGrid Margin="10" Height="200" ItemsSource="{Binding AllOrder}" SelectedItem="{Binding SelectedOrder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+
+            </DataGrid>
+
+            <Button Margin="0,5,0,0" Command="{Binding AddCommandOrder}" Content="Add Order" Height="35" FontSize="20" FontWeight="Bold" Background="Black" Foreground="White"></Button>
+            <Button Command="{Binding UpdateCommandOrder}" Content="Update Order" Height="35" FontSize="20" FontWeight="Bold" Background="Black" Foreground="White"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
